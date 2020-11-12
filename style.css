@@ -87,7 +87,7 @@
 /* <!-- home --> */
 .home {
     display: flex;
-    background-image: url('../img/banner.jpg');
+    background-image: url('./img/banner.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,7 +95,7 @@
     color:#fff;
     min-height: 500px;
     font-family: 'Ubuntu','sans-serif';
-    
+    z-index: initial;
     
 }
 
@@ -221,7 +221,7 @@
     padding-bottom: 10px;
 }
 .about-img{
-    background-image: url('../img/avt.jpg');
+    background-image: url('./img/avt.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
