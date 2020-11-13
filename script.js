@@ -21,9 +21,23 @@ function myFunction() {
 
 // stylist nvabar
 
-document.getElementById("menu-mobile").addEventListener('click',function(){
-  document.getElementById('menu').classList.toggle("oke")
+// document.getElementById("menu-mobile").addEventListener('click',function(){
+//   document.getElementById('menu').classList.toggle("oke")
  
+// });
+const menuButton = document.querySelector("#menu-mobile");
+const navLinks = document.querySelector("#menu");
+const links = document.querySelectorAll("#menu li");
+
+menuButton.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("oke");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    menuButton.classList.toggle("toggle");
 });
 
 // Contact Form send
