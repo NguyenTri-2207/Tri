@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="header">
     <nav class="header-navbar">
             <ul id="menu" class="topnav">
+                <div id="exit-menu">
+                  <i class="fas fa-times"></i>
+                </div>
                 <li><a class="active" href="">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Resume</a></li>
@@ -24,12 +28,24 @@
                 <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
             </ul>
             <div id ="menu-mb">
-              <a href="#home"><i class="fa fa-home"></i></a>
-              <a href="#experience"><i class="fa fa-user-graduate"></i></a>
-              <a href="#conTact"><i class="fa fa-users"></i></a>
-              <a href=""><i class="fa fa-bell"></i></a>
-              <div id="menu-mobile" href=""><i  class="fas fa-bars"></i></div>  
+              <a id="home-mobile" href="#home"><i class="fa fa-home"></i></a>
+              <a id="exp-mobile" href="#experience"><i class="fa fa-user-graduate"></i></a>
+              <a id="contact-mobile" href="#conTact"><i class="fa fa-users"></i></a>
+              <div id ="bell-mobile"><i class="fa fa-bell"></i></div>
+              <div id="menu-mobile" href="#"><i  class="fas fa-bars"></i></div>  
             </div>
+            <div id="bell">
+              <div class="bell-arrow"></div>
+              <div id="exit-bell">
+                <i class="fas fa-times"></i>
+              </div>
+              <ul>
+                
+                <li> - Thank you for visiting my website !</li>
+                <li> - Wish you a good day.</li>
+              </ul>
+            </div>
+           
            
         
     </nav>
