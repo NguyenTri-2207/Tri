@@ -1,15 +1,10 @@
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
-
 // Get the navbar
 var navbar = document.getElementById("menu");
-
 // Get the offset position of the menu
 var sticky = menu.offsetTop;
-// var skill = skills.offsetTop;
-// console.log(skill)
-
 // Add the sticky class to the menu when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset > sticky +100) {
@@ -18,28 +13,34 @@ function myFunction() {
     menu.classList.remove("sticky");  
   }
 }
-
 // stylist nvabar
-
-// document.getElementById("menu-mobile").addEventListener('click',function(){
-//   document.getElementById('menu').classList.toggle("oke")
- 
-// });
-const menuButton = document.querySelector("#menu-mobile");
-const navLinks = document.querySelector("#menu");
-const links = document.querySelectorAll("#menu li");
-
-menuButton.addEventListener('click', ()=>{
-   //Animate Links
-    navLinks.classList.toggle("oke");
-    links.forEach(link => {
-        link.classList.toggle("fade");
-    });
-
-    //Hamburger Animation
-    menuButton.classList.toggle("toggle");
+$(document).ready(function() {
+  $('#menu-mobile').click(function() {
+    $("#menu").toggle();
+  });
+  
+  $('#exit-menu').click(function() {
+    $("#menu").hide();
+  });
+  $('#home-mobile').click(function() {
+    $("#menu").hide();
+  });
+  $('#exp-mobile').click(function() {
+    $("#menu").hide();
+  });
+  $('#contact-mobile').click(function() {
+    $("#menu").hide();
+  });
+  $('#bell-mobile').click(function() {
+    $("#menu").hide();
+    $('#bell').toggle();
+  });
+  $('#exit-bell').click(function() {
+    $("#bell").hide();
+  });
+  
 });
-
+  
 // Contact Form send
 
 var sent =document.getElementById('form-btn').addEventListener('click',function(){
