@@ -40,6 +40,19 @@ $(document).ready(function() {
   });
   
 });
+  // notification list
+  var notificationList = [
+    '- Thank you for visiting my website !',
+    '- Wish you a good day.',
+    '- See You again !'
+  ]
+  var htmlList = document.getElementById('notification-List');
+  var contentNotificationList = notificationList.map(function(item){
+    return '<li>' + item + '</li>';
+    
+
+  })
+  htmlList.innerHTML = contentNotificationList.join('');
   
 // Contact Form send
 
@@ -78,5 +91,4 @@ function showTime(){
   setTimeout(showTime, 1000);
   
 }
-
 showTime();
